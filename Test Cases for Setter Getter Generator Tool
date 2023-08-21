@@ -1,0 +1,21 @@
+//test cases of setter getter 
+class Student  
+{
+    private int rollNumber;
+    private int age;
+    private long contactNumber;
+    private short height;
+    private byte size;
+    private String firstName;
+    private String lastName;
+    private String contact;
+    private String address;
+    private String city;
+    private String country;
+    private int CourseCode;
+    private double fee;
+    private char gender;
+    private boolean isIndian;
+    private Date dateOfBirth;
+    private BigDecimal feePaid;
+}    
