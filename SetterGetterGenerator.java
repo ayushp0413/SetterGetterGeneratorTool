@@ -31,7 +31,7 @@ class SetterGetterGenerator
             {
                 defaultConstructor=gg[1];
             }
-            if(!defaultConstructor.equals("constructor=false"))
+            if(!defaultConstructor.equalsIgnoreCase("constructor=false"))
             {
                 Field f;
                 // default constructor 
@@ -61,17 +61,9 @@ class SetterGetterGenerator
                    }
                    if(fieldType.getName().equals("char"))
                    {
-                      list.add("this."+fieldName+"="+"a;");
+                      list.add("this."+fieldName+"="+"'';");
                    }
-                   if(fieldType.getName().equals("java..Date"))
-                   {
-                      list.add("this."+fieldName+"="+"00/00/0000;");
-                   }
-                   if(fieldType.getName().equals("java.math.BigDecimal"))
-                   {
-                      list.add("this."+fieldName+"="+"0.000;");
-                   }
-                   
+                   return "null";
                 }
                 list.add("}");
             }
